@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    /* color: #FFF; */
+    font-family: 'Roboto', sans-serif;
+    padding: 80px 200px;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    font-size: 60px;
+    font-weight: 300;
+    color: black;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.brand-light {
+    margin-left: 15px;
+    font-weight: 100;
+    color: grey;
+}
+
+.add-link {
+    text-decoration: none;
+    font-weight: 100;
+    color: #FFF;
+    font-size: 36px;
+    margin-top: 100px;
+    margin-right: 70px;
+    color: black;
+}
+
+.add-icon {
+    color: #4287e9;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 80px 40px;
+    }
+    .header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .header i {
+        margin-top: 50px;
+    }
+}
+
+/* Task Container */
+.task-container {
+    margin-top: 80px;
+}
+
+.empty-message {
+    font-size: 30px;
+    color: black;
+    margin-left: 200px;
+}
+
+/* Adding blur */
+#blur.active {
+    filter: blur(10px);
+    user-select: none;
+    pointer-events: none;
+}
+
+/* popup */
+/* Add Card Popup */
+.add-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid #185ADB;
+    background-color: #FFF;
+    color: #185ADB;
+    padding: 5px 20px;
+    width: 320px;
+    border-radius: 10px;
+}
+
+.add-popup p {
+    font-size: 25px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.title-field {
+    display: block;
+    border: none;
+    border-bottom: 2px solid #185ADB;
+    /* border-radius: 5px; */
+    height: 35px;
+    width: 280px;
+}
+
+.button {
+    margin: 15px 10px;
+    cursor: pointer;
+    background-color: #185ADB;
+    padding: 8px 25px;
+    border-radius: 19px;
+    outline: 0;
+    border: none;
+    color: #FFF;
+    font-size: 23px;
+}
+
+.button a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media screen and (max-width: 900px) {
+    .add-popup {
+        padding: 5px 60px;
+        width: 300px;
+    }
+    .title-field {
+        width: 200px;
+    }
+}
+
+/* Add List Popup */
+.add-list-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid #185ADB;
+    background-color: #FFF;
+    color: #185ADB;
+    padding: 5px 20px;
+    width: 320px;
+    border-radius: 10px;
+}
+
+.add-list-popup p {
+    font-size: 25px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.list-field {
+    display: block;
+    border: 1px solid #185ADB;
+    border-radius: 5px;
+    height: 35px;
+    width: 280px;
+}
+
+.button {
+    margin: 15px 10px;
+    cursor: pointer;
+    background-color: #185ADB;
+    padding: 8px 25px;
+    border-radius: 19px;
+    outline: 0;
+    border: none;
+    color: #FFF;
+    font-size: 23px;
+}
+
+.button a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+@media screen and (max-width: 900px) {
+    .add-list-popup {
+        padding: 5px 60px;
+        width: 300px;
+    }
+    .list-field {
+        width: 200px;
+    }
+}
+/* Card CSS */
+/* container */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Task Card */
+.task-card {
+    min-height: 350px;
+    width: 250px;
+    background-color: #FFF;
+    margin: 20px auto;
+    color: #185ADB;
+    border-radius: 10px;
+    border: 1px solid #185ADB;
+}
+
+.task-content {
+    text-align: center;
+    font-size: 21px;
+    height: 100%;
+}
+
+.task-content .title  {
+    margin: 15px 0;
+    color: #185ADB;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.task-content-horizontal {
+    color: #000;
+}
+
+.sub-task {
+    height: 65%;
+}
+
+.card-crud {
+    height: 35%;
+    position: relative;
+}
+
+.crud-logo {
+    position:absolute;
+    bottom: 100px;
+    right: 10px;
+}
+
+.card-crud i {
+    cursor: pointer;
+    font-size: 26px;
+    margin: 0 3px;
+}
+
+.content-add-icon {
+    color: #2222e0ad;
+}
+
+/* Sub Task List */
+.sub-task .sub-task-ul {
+    list-style: none;
+    color: red;
+    margin-top: 20px;
+}
+
+.sub-task .sub-task-ul li {
+    margin-top: 10px;
+    margin-right: 10px;
+    list-style: none;
+    font-weight: 300;
+}
+
+.sub-task .sub-task-ul .mark-done {
+    background: #4287e9;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
